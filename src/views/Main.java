@@ -4,6 +4,7 @@
  */
 package views;
 
+import controller.MainController;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
@@ -19,6 +20,7 @@ public class Main extends javax.swing.JFrame {
     //RedimencionarImagem resize = new RedimencionarImagem();
 
     private static Main instance;
+    private MainController controller;
     
     public static Main getInstance(){
         if(instance == null){
@@ -32,6 +34,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        controller = new MainController(this);
 
         //Serve para buscar a imagem pelo caminho que ela fica dentro do programa
         ClassLoader cl = this.getClass().getClassLoader();
@@ -87,6 +90,11 @@ public class Main extends javax.swing.JFrame {
                 btnDecksMouseExited(evt);
             }
         });
+        btnDecks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDecksActionPerformed(evt);
+            }
+        });
 
         btnHistorico.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnHistorico.setText("Histórico");
@@ -116,6 +124,11 @@ public class Main extends javax.swing.JFrame {
                 btnNovoDeckMouseExited(evt);
             }
         });
+        btnNovoDeck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoDeckActionPerformed(evt);
+            }
+        });
 
         btnNovaPartida.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnNovaPartida.setText("Nova Partida");
@@ -126,6 +139,11 @@ public class Main extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnNovaPartidaMouseExited(evt);
+            }
+        });
+        btnNovaPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaPartidaActionPerformed(evt);
             }
         });
 
@@ -140,6 +158,11 @@ public class Main extends javax.swing.JFrame {
                 btnRegrasMouseExited(evt);
             }
         });
+        btnRegras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegrasActionPerformed(evt);
+            }
+        });
 
         btnSobre.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         btnSobre.setText("Sobre");
@@ -150,6 +173,11 @@ public class Main extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSobreMouseExited(evt);
+            }
+        });
+        btnSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSobreActionPerformed(evt);
             }
         });
 
@@ -240,6 +268,11 @@ public class Main extends javax.swing.JFrame {
                 btnTodasCartasMouseExited(evt);
             }
         });
+        btnTodasCartas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTodasCartasActionPerformed(evt);
+            }
+        });
         jPanel3.add(btnTodasCartas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 160, 40));
 
         btnColecao.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -325,10 +358,11 @@ public class Main extends javax.swing.JFrame {
 
     private void btnColecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColecaoActionPerformed
         // Teste para usar icone do deadpool na menssagem de erro.
-        ClassLoader cl = this.getClass().getClassLoader();
+        /*ClassLoader cl = this.getClass().getClassLoader();
         ImageIcon icone = new ImageIcon(cl.getResource("views/imagens/gifs/deadpoolErro.gif"));
         icone.setImage(new ImageIcon(icone.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT)).getImage());
-        JOptionPane.showMessageDialog(null, "Menssagem", "Mensagem", 0, icone);
+        JOptionPane.showMessageDialog(null, "Menssagem", "Mensagem", 0, icone);*/
+        controller.interfaceColecao();
     }//GEN-LAST:event_btnColecaoActionPerformed
 
     private void btnTodasCartasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTodasCartasMouseEntered
@@ -410,12 +444,36 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPesquisarKeyPressed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-        System.out.println("Pesquisar");
+        controller.pesquisar();
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
     private void btnHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoActionPerformed
-        // TODO add your handling code here:
+        controller.interfaceHistorico();
     }//GEN-LAST:event_btnHistoricoActionPerformed
+
+    private void btnDecksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecksActionPerformed
+        controller.interfaceDecks();
+    }//GEN-LAST:event_btnDecksActionPerformed
+
+    private void btnNovaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaPartidaActionPerformed
+        controller.interfaceNovaPartida();
+    }//GEN-LAST:event_btnNovaPartidaActionPerformed
+
+    private void btnNovoDeckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoDeckActionPerformed
+        controller.interfaceNovoDeck();
+    }//GEN-LAST:event_btnNovoDeckActionPerformed
+
+    private void btnRegrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegrasActionPerformed
+        controller.interfaceRegras();
+    }//GEN-LAST:event_btnRegrasActionPerformed
+
+    private void btnSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSobreActionPerformed
+        controller.interfaceSobre();
+    }//GEN-LAST:event_btnSobreActionPerformed
+
+    private void btnTodasCartasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTodasCartasActionPerformed
+        controller.interfaceGameCards();
+    }//GEN-LAST:event_btnTodasCartasActionPerformed
 
     /**
      * @param args the command line arguments

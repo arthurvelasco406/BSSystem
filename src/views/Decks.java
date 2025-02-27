@@ -434,7 +434,7 @@ public class Decks extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisarMouseExited
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-        System.out.println("Pesquisar");
+        
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
     /**

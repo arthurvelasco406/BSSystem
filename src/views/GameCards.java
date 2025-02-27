@@ -288,7 +288,7 @@ public class GameCards extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisarMouseExited
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-        System.out.println("Pesquisar");
+        
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed

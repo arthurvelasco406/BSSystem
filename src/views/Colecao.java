@@ -336,7 +336,7 @@ public class Colecao extends javax.swing.JFrame {
     }//GEN-LAST:event_labelCartaMouseClicked
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-        System.out.println("Pesquisar");
+
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
     private void btnPesquisarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisarMouseExited

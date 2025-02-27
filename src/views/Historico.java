@@ -13,7 +13,17 @@ public class Historico extends javax.swing.JFrame {
     /**
      * Creates new form HistoricoPartidas
      */
-    public Historico() {
+    private static Historico instance;
+    
+    public static Historico getInstance(){
+        if(instance == null){
+            instance = new Historico();
+        }
+        
+        return instance;
+    }
+    
+    private Historico() {
         initComponents();
     }
 

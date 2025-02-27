@@ -88,7 +88,7 @@ public class NovaPartida extends javax.swing.JFrame {
         checkEditar = new javax.swing.JCheckBox();
         labelFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Nova Partida");
         setResizable(false);
 
