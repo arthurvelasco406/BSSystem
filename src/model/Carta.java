@@ -1,69 +1,62 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 /**
  *
  * @author Usuario
  */
-abstract class Carta{
-    private String nome;
-    private String versao;
-    //private String ou Enum tipo;
-    private String raridade;
-    private String colecao;
-    private String texto;
+public class Carta{
+    private final String nome;
+    private final String versao;
+    private final TipoCartaEnum tipo;
+    private final String raridade;
+    private final String colecao;
+    private final String texto;
     private int qtd;
 
-    public Carta(String nome, String versao, String raridade, String colecao, String texto, int qtd) {
+    public Carta(String nome, String versao, String tipo, String raridade, String colecao, String texto) {
         this.nome = nome;
         this.versao = versao;
+        this.tipo = TipoCartaEnum.valueOf(tipo.toUpperCase());
         this.raridade = raridade;
         this.colecao = colecao;
         this.texto = texto;
+        this.qtd = 0;
+    }
+    
+    public Carta(String nome, int qtd){
+        this.nome = nome;
         this.qtd = qtd;
+        
+        this.versao = null;
+        this.tipo = null;
+        this.raridade = null;
+        this.colecao = null;
+        this.texto = null;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getVersao() {
         return versao;
     }
-
-    public void setVersao(String versao) {
-        this.versao = versao;
+    
+    public String getTipo(){
+        return tipo.getTipo();
     }
 
     public String getRaridade() {
         return raridade;
     }
 
-    public void setRaridade(String raridade) {
-        this.raridade = raridade;
-    }
-
     public String getColecao() {
         return colecao;
     }
 
-    public void setColecao(String colecao) {
-        this.colecao = colecao;
-    }
-
     public String getTexto() {
         return texto;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
     }
 
     public int getQtd() {
