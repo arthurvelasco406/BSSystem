@@ -43,7 +43,7 @@ public class EditarDeck extends javax.swing.JFrame {
         ((JSpinner.NumberEditor)spinnerRemover).getTextField().setEditable(false);
         
         //Configura as imagens nas labels e btns
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         ImageIcon pesq = new ImageIcon("images/icons/lupa.png");
         ImageIcon iconEnergia = new ImageIcon("images/icons/energiaPersonagem.png");
         ImageIcon icon = new ImageIcon("images/gifs/jeanGrey.gif");

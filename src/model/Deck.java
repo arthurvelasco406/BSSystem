@@ -81,7 +81,4 @@ public class Deck {
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
     }
-    
-    
-    
 }

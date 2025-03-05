@@ -41,10 +41,10 @@ public class NovaPartida extends javax.swing.JFrame {
         
         //Configurando as imagens nas labels
         ClassLoader cl = this.getClass().getClassLoader();
-        ImageIcon iconFight = new ImageIcon("images/logoFight.png");
+        ImageIcon iconFight = new ImageIcon("images/system/logoFight.png");
         ImageIcon iconSpider = new ImageIcon("images/gifs/spider.gif");
         ImageIcon iconVenom = new ImageIcon("images/gifs/venom.gif");
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         
         labelFight.setIcon(new ImageIcon(iconFight.getImage().getScaledInstance(labelFight.getWidth(), labelFight.getHeight(), Image.SCALE_DEFAULT)));
         labelSpider.setIcon(new ImageIcon(iconSpider.getImage().getScaledInstance(labelSpider.getWidth(), labelSpider.getHeight(), Image.SCALE_DEFAULT)));

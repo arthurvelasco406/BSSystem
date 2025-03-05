@@ -31,7 +31,7 @@ public class Decks extends javax.swing.JFrame {
     private Decks() {
         initComponents();
         
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         ImageIcon pesq = new ImageIcon("images/icons/lupa.png");
         ImageIcon icon = new ImageIcon("images/gifs/gambit.gif");
         

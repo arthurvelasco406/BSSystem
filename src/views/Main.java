@@ -39,9 +39,9 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         controller = new MainController(this);
         
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         ImageIcon pesq = new ImageIcon("images/icons/lupa.png");
-        ImageIcon logo = new ImageIcon("images/logoBS.png");
+        ImageIcon logo = new ImageIcon("images/system/logoBS.png");
         ImageIcon icon = new ImageIcon("images/gifs/deadpool_Hello.gif");
         
         labelLogo.setIcon(logo);

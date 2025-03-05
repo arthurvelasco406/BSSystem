@@ -37,7 +37,7 @@ public class NovoDeck extends javax.swing.JFrame {
         JComponent spinnerAdd = spinnerQtd.getEditor();
         ((JSpinner.NumberEditor)spinnerAdd).getTextField().setEditable(false);
         
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         ImageIcon pesq = new ImageIcon("images/icons/lupa.png");
         ImageIcon iconEnergia = new ImageIcon("images/icons/energiaPersonagem.png");
         ImageIcon icon = new ImageIcon("images/gifs/ciclope.gif");

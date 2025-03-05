@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -35,10 +36,10 @@ public class Colecao extends javax.swing.JFrame {
         initComponents();
         
         ImageIcon pesq = new ImageIcon("images/icons/lupa.png");
-        ImageIcon fundo = new ImageIcon("images/fundo.jpg");
+        ImageIcon fundo = new ImageIcon("images/system/fundo.jpg");
         ImageIcon icon = new ImageIcon("images/gifs/wolverine.gif");
         //Provisório, apenas para servir de base de como ficará as carta.
-        ImageIcon icon2 = new ImageIcon("images/carta_Exemplo.png");
+        ImageIcon icon2 = new ImageIcon("images/system/carta_Exemplo.png");
         
         btnPesquisar.setIcon(pesq);
         labelFundo.setIcon(fundo);
